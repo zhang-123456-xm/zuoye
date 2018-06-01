@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+	</head>
+	<body>
+	</body>
+	<script>
+		var a = [1,2,4,2]
+		var b = [3,4,3,3,3]
+//		1 2 2 3 3 3 3 4 4
+		console.log(num(a,b))
+		
+		function num(a,b){
+			var arr = a.concat(b)
+			
+			var arr2 = arr.sort(function(a,b){
+				return a-b
+			})
+			if(arr2.length%2 == 1){
+				var newnum =    arr2[Math.floor(arr2.length/2)]
+				return newnum
+			}else{
+			   var newnum =  (arr2[arr2.length/2]+arr2[arr2.length/2-1])/2
+			   return newnum
+			}
+			
+		}
+		
+//		
+//		[1, 2, 3, 4, 4, 5, 6, 6]
+//		                          4
+//		        
+//		         3 4
+//		          4
+//		          
+//		[1, 2, 3, 4, 5, 6, 6]          
+//		                        7
+//		                        3.5
+//		                        3
+//		          4
+		
+	</script>
+</html>
